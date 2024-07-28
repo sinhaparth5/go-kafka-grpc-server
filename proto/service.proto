@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package main;
+package pb;
 
 option go_package = "github.com/sinhaparth5/go-kafka-grpc-server/proto";
 
@@ -11,20 +11,23 @@ service KafkaService {
 }
 
 message ProduceRequest {
-  string message = 1;
+  string topic = 1;
+  string message = 2;
 }
 
 message ProduceResponse {
   bool success = 1;
 }
 
-message ConsumeRequest {}
+message ConsumeRequest {
+  string topic = 1;
+}
 
 message ConsumeResponse {
   repeated string messages = 1;
 }
 
-message  CreateTopicRequest {
+message CreateTopicRequest {
   string topic = 1;
   int32 num_partitions = 2;
   int32 replication_factor = 3;

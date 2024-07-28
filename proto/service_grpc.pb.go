@@ -19,9 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion8
 
 const (
-	KafkaService_Produce_FullMethodName     = "/main.KafkaService/Produce"
-	KafkaService_Consume_FullMethodName     = "/main.KafkaService/Consume"
-	KafkaService_CreateTopic_FullMethodName = "/main.KafkaService/CreateTopic"
+	KafkaService_Produce_FullMethodName     = "/pb.KafkaService/Produce"
+	KafkaService_Consume_FullMethodName     = "/pb.KafkaService/Consume"
+	KafkaService_CreateTopic_FullMethodName = "/pb.KafkaService/CreateTopic"
 )
 
 // KafkaServiceClient is the client API for KafkaService service.
@@ -165,7 +165,7 @@ func _KafkaService_CreateTopic_Handler(srv interface{}, ctx context.Context, dec
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var KafkaService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "main.KafkaService",
+	ServiceName: "pb.KafkaService",
 	HandlerType: (*KafkaServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
