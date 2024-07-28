@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package main;
 
-option go_package = "github.com/sinhaparth5/go-kafka-grpc-server";
+option go_package = "github.com/sinhaparth5/go-kafka-grpc-server/proto";
 
 service KafkaService {
   rpc Produce (ProduceRequest) returns (ProduceResponse);

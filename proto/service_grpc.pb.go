@@ -4,7 +4,7 @@
 // - protoc             v5.28.0--rc1
 // source: service.proto
 
-package go_kafka_grpc_server
+package proto
 
 import (
 	context "context"
