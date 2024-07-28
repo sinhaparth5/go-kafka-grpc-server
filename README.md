@@ -1,4 +1,4 @@
-# go-kafka-grpc-server
+# Golang + Kafka + gRPC
 Create a Kafka producer and consumer with Golang using grpc
 
 
